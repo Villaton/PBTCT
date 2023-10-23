@@ -1,4 +1,3 @@
-import os
 import time
 from pygame import mixer
 
@@ -31,3 +30,8 @@ def play_seconds_voice(seconds):
     elif seconds == 60:
         mixer.music.load('One_minute.mp3')
         mixer.music.play()
+
+def play_players_ready():
+    mixer.init()
+    mixer.music.load('players_ready.mp3')
+    mixer.music.play()

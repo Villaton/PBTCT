@@ -7,6 +7,7 @@ stop_countdown = False
 
 def countdown(seconds):
     global stop_countdown
+    beep.play_players_ready()
     while seconds:
         if stop_countdown:
             stop_countdown = False
@@ -14,7 +15,7 @@ def countdown(seconds):
         time.sleep(1)
         seconds -= 1
         beep.play_seconds_voice(seconds)
-        if seconds < 10:
+        if seconds < 9:
             beep.play_beep_short()
         # Add graphical field to show seconds
         seconds_label.config(text=f"Seconds remaining: {seconds}")
