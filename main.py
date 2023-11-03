@@ -31,18 +31,19 @@ def stop_timer():
     stop_countdown = True
 
 root = tk.Tk()
+root.title("Paintball training timer")
 
-start_button = tk.Button(root, text='Start', command=start_timer, width=10, height=3)
+start_button = tk.Button(root, font=("Arial", 20), text='Start', command=start_timer, width=10, height=3)
 start_button.pack(side=tk.LEFT)
 
-stop_button = tk.Button(root, text='Stop', command=stop_timer, width=10, height=3)
+stop_button = tk.Button(root, font=("Arial", 20), text='Stop', command=stop_timer, width=10, height=3)
 stop_button.pack(side=tk.RIGHT)
 
-entry = tk.Entry(root)
+entry = tk.Entry(root, font=("Arial", 20))
+entry.insert(0, "30")
 entry.pack()
 
 seconds_label = tk.Label(root, text="", font=("Arial", 30))
 seconds_label.pack()
 
 root.mainloop()
-
